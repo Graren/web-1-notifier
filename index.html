@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Wed Storage</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title">
+    <link rel="stylesheet" href="/dist/bundle/main.css" media="screen" title="no title">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-fixed-top bg-inverse">
+        <button type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="#">Notifier</a>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-9 offset-sm-3 col-md-9 offset-md-2 main">
+                <h1>Notifications</h1>
+
+                <div class="row placeholders">
+
+                    <h2>Information Table</h2>
+                    <div class="table-responsive">
+                        <table id="table" class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Number</th>
+                                    <th>Reminder</th>
+                                    <th>Time</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-9 offset-md-2 container typer">
+                            <br>
+                            <div class="col-md-12 col-lg-12 container">
+                                <div class="form-group ">
+                                    <label>Description</label>
+                                    <input id="description" type="text" name="name" value="">
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-9 offset-md-2 container typer">
+                            <br>
+                            <div class="col-md-12 col-lg-12 container">
+                                <div class="form-group">
+                                    <label>Time</label>
+                                    <input id="time" type="text" name="name" value="">
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-3 offset-md-2 container typer">
+                            <div class="col-md-9 col-lg-9 container shall">
+                                <div class="form-group">
+                                    <button id="saveButton" type="button" name="button">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="container-fluid">
+                <div class="col-md-5 offset-md-2 text-justify typer">
+                    <p>
+                        Add a description, add a time to wait, and That's that, you'll be reminded in as much time as you specified
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <!-- <script type="text/javascript" src="resources/js/app.js" defer></script> -->
+    <!-- <script type="text/javascript" src="resources/js/main.js" defer></script> -->
+    <script src="http://localhost:5000/dist/bundle/main.js"></script>
+    <!-- <script type="text/javascript" src="dist/bundle/main.js"></script> -->
+    <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/tether/dist/js/tether.min.js"></script>
+    <script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
