@@ -1,7 +1,8 @@
 /*jshint esversion: 6 */
 //buttens declaration
-var saveButton;
-
+var saveButton, delButton;
+var stop;
+stop = {};
 //form declaration
 var description = document.querySelector('#description');
 var time = document.querySelector('#time');
@@ -11,7 +12,7 @@ var table, tableBody, TableRows;
 
 //butten initialization
 saveButton = document.querySelector('#saveButton');
-
+delButton = document.querySelector('#delButton');
 
 //Reminder declaration
 var reminder;
@@ -28,6 +29,10 @@ saveButton.addEventListener('click', () => {
     saveReminder();
     description.value = "";
     time.value = "";
+});
+
+delButton.addEventListener('click', () => {
+    stopNotif(stop);
 });
 
 if (window.localStorage.reminder) {
@@ -55,7 +60,7 @@ function saveReminder() {
     if (description.value === "") {
         Reminder.description = "Default";
     }
-    setTimeout(() => {
+    stop = setTimeout(() => {
         reminder.push(Reminder);
         window.localStorage.reminder = JSON.stringify(reminder);
         console.log(Reminder.description);
@@ -152,6 +157,12 @@ function deleteReminder(rem) {
     reminder.splice(index, 1);
     window.localStorage.reminder = JSON.stringify(reminder);
     show();
+}
+
+function stopNotif(notif) {
+    if (notif !== undefined && notif !== {}) {
+        clearTimeout(notif);
+    }
 }
 
 export function a() {
